@@ -1,0 +1,433 @@
+:root {
+    --main-background: #f0f0f0;
+    --gray-section-color: #fafafa;
+    --footer-background: #333333;
+    --white-color: #F8F6F0;
+}
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* menu superior */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--white-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.main-logo img {
+    width: 150px;
+    margin-left: 0px;
+    margin-bottom: 1px;
+}
+
+.main-nav {
+    flex: 1;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: red;
+    margin: 0 15px;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #cc0000;
+    border-bottom-color: #cc0000
+}
+
+/* main-section */
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.15),
+        inset 0 3px 6px rgba(255, 255, 255, 0.7);
+}
+
+.main-img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main-slogan span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 1 1rem;
+}
+
+.main-slogan span {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* about section */
+.about,
+.contact {
+    background-color: var(--gray-section-color);
+    width: 100%;
+    box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.15),
+        inset 0 3px 6px rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    padding-bottom: 5rem;
+}
+
+.red-title {
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.about-title {
+    color: var(--footer-background);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.about h2 {
+    color: var(--footer-background);
+    font-size: 2rem;
+    margin-left: 30px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content.banner {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.about-content.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white-color);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+
+.about-content.banner:hover img {
+    transform: scale(1.1);
+
+}
+
+.about-content.banner:hover .banner-text {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+}
+
+
+/* Sucursales Section */
+.sucursales {
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.15),
+        inset 0 3px 6px rgba(255, 255, 255, 0.7);
+    padding-bottom: 2rem;
+}
+
+.sucursales-img {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    flex: 1;
+    max-width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3ease, box-shadoww 0.3 ease;
+    text-align: center;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+.card p {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(1, 0, 0, 0.3);
+}
+
+/* services section */
+.services {
+    background-color: var(--gray-section-color);
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.15),
+        inset 0 3px 6px rgba(255, 255, 255, 0.7);
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+/* carousel-container */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel img {
+    width: 220px;
+    height: 150px;
+    object-fit: fill;
+    transition: transform 0.3 ease, box-shadow 0.3 ease;
+}
+
+.carousel img:hover {
+    transform: scale(1.2);
+
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* contact section */
+.contact {
+    background-color: #fff;
+    margin-top: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    border: 1px solid rgba(1, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d32f2f;
+    box-shadow: 0 0 8px rgba(211, 47, 47, 0.2);
+    background-color: #f0f0f0;
+    outline: none;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.send-message {
+    margin-left: 25%;
+    margin-right: 25%;
+    max-width: 80%;
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
+}
+
+.send-message:hover {
+    background-color: #b71c1c;
+}
+
+/* footer section */
+.main-footer {
+    background: linear-gradient(135deg, #222, #333);
+    color: #fff;
+    padding: 2rem 1rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.footer h3.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #d32f2f;
+}
+
+.footer p,
+.footer a {
+    color: #ccc;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3 ease;
+}
+
+.footer-rrss a {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    margin-right: 8px;
+    transition: color 0.3 ease;
+    text-align: right;
+}
+
+.footer a:hover {
+    color: #d32f2f;
+    ;
+}
+
+.main-footer::after {
+    content: "© 2025 RPG Soluciones 2021 c.a. Todos los derechos reservados.";
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.footer-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 30px;
+}
+
+.footer-sections a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-sections a:hover {
+    color: #fff;
+}
