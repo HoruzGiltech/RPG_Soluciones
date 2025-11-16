@@ -151,12 +151,11 @@ nav a:hover {
 
 .about-content.banner {
     position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 20px;
+    width: 100vw;
+    height: 300px;
+    margin: 0px;
     overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    border-radius: 0px;
 }
 
 .about-content.banner img {
@@ -430,4 +429,18 @@ nav a:hover {
 
 .footer-sections a:hover {
     color: #fff;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+    .about-content.banner {
+        height: 200px;
+        /* Menor altura en móviles */
+    }
+
+    .banner-text {
+        font-size: 1.2rem;
+        /* Texto más pequeño en móviles */
+    }
 }
