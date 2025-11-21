@@ -67,6 +67,19 @@ nav a:hover {
     border-bottom-color: #cc0000
 }
 
+/* toggle */
+.toggle-btn {
+    display: none;
+    font-size: 50px;
+    cursor: pointer;
+    color: #cc0000;
+    transition: transform 0.70s ease;
+}
+
+.toggle-btn.rotate {
+    transform: rotate(90deg);
+}
+
 /* main-section */
 .main-section {
     display: flex;
@@ -442,5 +455,58 @@ nav a:hover {
     .banner-text {
         font-size: 1.2rem;
         /* Texto más pequeño en móviles */
+    }
+
+    .main-menu {
+        max-height: 0;
+        overflow: hidden;
+        /* display: none; */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--white-color);
+        width: 220px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        border-radius: 8px;
+        transition: max-height 2s ease, paddin 0.15s ease;
+        z-index: 999;
+
+    }
+
+    .main-menu.show {
+        /* display: flex; */
+        max-height: 500px;
+        padding: 1rem;
+        opacity: 1;
+        /* animation: slideDown 0.3s ease forwards; */
+        transform: translateY((0));
+    }
+
+    .toggle-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .main-menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
