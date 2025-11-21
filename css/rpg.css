@@ -188,6 +188,7 @@ nav a:hover {
     font-weight: bold;
     text-align: center;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    transition: all 0.7s ease;
 }
 
 
@@ -228,7 +229,7 @@ nav a:hover {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3ease, box-shadoww 0.3 ease;
+    transition: transform 1s ease, box-shadoww 0.3s ease;
     text-align: center;
     flex-direction: column;
 }
@@ -241,8 +242,8 @@ nav a:hover {
 
 
 .card p {
-    padding: 10px;
-    font-size: 1rem;
+    padding: 5px;
+    font-size: 0.8rem;
 }
 
 .card:hover {
@@ -442,6 +443,18 @@ nav a:hover {
 
 .footer-sections a:hover {
     color: #fff;
+}
+
+.powered {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--white-color);
+}
+
+.powered a {
+    color: #d32f2f;
+    text-decoration: none;
 }
 
 /* responsive */

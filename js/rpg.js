@@ -31,4 +31,17 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     });
 
+    document.querySelectorAll('.banner-text').forEach(textElement => {
+        const originalText = textElement.textContent;
+        const hoverText = textElement.getAttribute('data-text');
+
+        textElement.parentElement.addEventListener('mouseenter', () => {
+            textElement.textContent = hoverText;
+        });
+
+        textElement.parentElement.addEventListener('mouseleave', () => {
+            textElement.textContent = originalText;
+        });
+    });
+
 });
